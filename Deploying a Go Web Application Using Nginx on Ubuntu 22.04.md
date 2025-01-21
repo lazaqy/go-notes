@@ -5,7 +5,7 @@
 apt install golang-go -y
 ```
 
-Once the Go package is installed, you can verify its version with the following command:
+- Once the Go package is installed, you can verify its version with the following command:
 
 ```bash
 go version
@@ -95,16 +95,16 @@ SyslogIdentifier=sleepservice
 [Install]
 WantedBy=multi-user.target
 ```
-Save and close the file, then reload the systemd daemon to apply the changes.
+- Save and close the file, then reload the systemd daemon to apply the changes.
 ```bash
 systemctl daemon-reload
 ```
-Next, start and enable the Go service using the following command:
+- Next, start and enable the Go service using the following command:
 ```bash
 systemctl start goweb
 systemctl enable goweb
 ```
-You can check the status of the Go service with the following command:
+- You can check the status of the Go service with the following command:
 ```bash
 systemctl status goweb
 ```
@@ -128,11 +128,11 @@ Oct 15 15:45:37 ubuntupc systemd[1]: Started goweb.
 ```bash
 apt install nginx
 ```
-Next, create an Nginx virtual host configuration file.
+- Next, create an Nginx virtual host configuration file.
 ```bash
 nano /etc/nginx/conf.d/go.conf
 ```
-Add the following configuration:
+- Add the following configuration:
 ```
 server {
     server_name go.example.com;
@@ -141,7 +141,7 @@ server {
     }
 }
 ```
-Save and close the file, then verify the Nginx for any syntax errors.
+- Save and close the file, then verify the Nginx for any syntax errors.
 ```bash
 nginx -t
 ```
@@ -150,7 +150,7 @@ Output:
 nginx: the configuration file /etc/nginx/nginx.conf syntax is ok
 nginx: configuration file /etc/nginx/nginx.conf test is successful
 ```
-Then, restart the Nginx service to reload the changes.
+- Then, restart the Nginx service to reload the changes.
 ```bash
 systemctl restart nginx
 ```
@@ -158,6 +158,6 @@ systemctl restart nginx
 ## Step 5 – Access Go Application ##
 ### Now, open your web browser and access the Go application using the URL http://go.example.com. You will see the following screen. ###
 
-> Access go web page
+- Access go web page
 
-> You can also greet with a specific keyword using the URL http://go.example.com:/greet/atlantic. You will see the following screen.
+- You can also greet with a specific keyword using the URL http://go.example.com:/greet/atlantic. You will see the following screen.
