@@ -12,7 +12,9 @@ go version
 ```
 
 Output:
+```
 go version go1.18.1 linux/amd64
+```
 
 ## Step 2 – Create a Simple Go Application ##
 ### In this section, we will create a Go application that will print “Hello Go Application” when accessing the domain. ###
