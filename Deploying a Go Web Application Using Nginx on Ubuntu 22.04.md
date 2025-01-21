@@ -33,7 +33,7 @@ go mod init go.example.com/app
 nano main.go
 ```
 - Add the following code:
-<sub>
+```
 package main
 
 import (
@@ -53,22 +53,22 @@ func main() {
 
     http.ListenAndServe(":9990", nil)
 }
-</sub>
-Save and close the file, then compile the file into the executable binary file.
+```
+- Save and close the file, then compile the file into the executable binary file.
 ```bash
 go build main.go
 ```
-You can see the executable binary file using the following command:
+- You can see the executable binary file using the following command:
 ```bash
 ls -l
 ```
 Output:
-
-> total 6152
-> -rw-r--r-- 1 root root      35 Oct 15 15:43 go.mod
-> -rwxr-xr-x 1 root root 6288896 Oct 15 15:44 main
-> -rw-r--r-- 1 root root     408 Oct 15 15:44 main.go
-> 
+```
+total 6152
+-rw-r--r-- 1 root root      35 Oct 15 15:43 go.mod
+-rwxr-xr-x 1 root root 6288896 Oct 15 15:44 main
+-rw-r--r-- 1 root root     408 Oct 15 15:44 main.go
+```
 ## Step 3 – Create a Systemd Service File for Your Application ##
 ### Next, you will need to create a systemd file to manage the Go application. ###
 ```bash
